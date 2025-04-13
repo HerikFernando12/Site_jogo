@@ -1,0 +1,52 @@
+{
+	"name": "espinho",
+	"plugin-id": "Sprite",
+	"sid": 149668087608501,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 855,
+						"height": 360,
+						"originX": 0.43742690058479533,
+						"originY": 0.41388888888888886,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6016629,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9988304093567252,
+								0,
+								0.9988304093567252,
+								0.9972222222222222,
+								0,
+								0.9972222222222222
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 168712914073570,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

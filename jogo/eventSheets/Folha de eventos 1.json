@@ -1,0 +1,656 @@
+{
+	"name": "Folha de eventos 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Pontos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 567745540323001
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 536111912357388
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Animação",
+					"sid": 116575497633563,
+					"behaviorType": "Fixar",
+					"parameters": {
+						"pin-to": "Jogador",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Animação",
+					"sid": 816099362304499,
+					"parameters": {
+						"animation": "\"Parado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 721620541041841,
+					"parameters": {
+						"audio-file": "gamemusic",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"gamemusic\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 551343369460699,
+					"parameters": {
+						"tag": "\"musica\""
+					}
+				}
+			],
+			"sid": 523639599753097
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 311800076773928,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Animação",
+					"sid": 375611782096945,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 185211021250834
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 440778956975831,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Animação",
+					"sid": 226275206117451,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 825419281525069
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-moved",
+					"objectClass": "Jogador",
+					"sid": 599829617887726,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Animação",
+					"sid": 564400939319647,
+					"parameters": {
+						"animation": "\"Andar\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 973098247607479
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-stopped",
+					"objectClass": "Jogador",
+					"sid": 239456559199112,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Animação",
+					"sid": 499742283337917,
+					"parameters": {
+						"animation": "\"Parado\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 797936768105126
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-jump",
+					"objectClass": "Jogador",
+					"sid": 782460630801731,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Animação",
+					"sid": 372306275080521,
+					"parameters": {
+						"animation": "\"pulo\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 176596193671577
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-landed",
+					"objectClass": "Jogador",
+					"sid": 700168753905858,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [],
+			"sid": 431927357765413,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Jogador",
+							"sid": 622001196727943,
+							"behaviorType": "Plataforma"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Animação",
+							"sid": 271002485856437,
+							"parameters": {
+								"animation": "\"Andar\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 134361030061565
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Jogador",
+							"sid": 849637081865135,
+							"behaviorType": "Plataforma",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Animação",
+							"sid": 942995302493872,
+							"parameters": {
+								"animation": "\"Parado\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 496641846689331
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jogador",
+					"sid": 119421347544141,
+					"parameters": {
+						"object": "cristal_coração"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "cristal_coração",
+					"sid": 273942868049622
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 780117680405514,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 846097255258366,
+					"parameters": {
+						"audio-file": "wining",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 882783961392967
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 554562605658415
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Pontos",
+					"sid": 690454761236056,
+					"parameters": {
+						"text": "\"Pontos: \" & Pontos"
+					}
+				}
+			],
+			"sid": 136868690250307
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jogador",
+					"sid": 232789932753676,
+					"parameters": {
+						"object": "inimigo1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 390178209128917,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-falling",
+							"objectClass": "Jogador",
+							"sid": 505292611377173,
+							"behaviorType": "Plataforma"
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Jogador",
+							"sid": 707525878140661,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "inimigo1.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "inimigo1",
+							"sid": 341103581538771
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "Jogador",
+							"sid": 320854824775963,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"vector-y": "-400"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 751670333207603,
+							"parameters": {
+								"audio-file": "monster-death-grunt-131480",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 449267588594434
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 867805155689318
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Animação",
+							"sid": 646267309015962,
+							"parameters": {
+								"animation": "\"morte\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Jogador",
+							"sid": 876455158742007
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 779790794245204,
+							"parameters": {
+								"audio-file": "male-death-sound-128357",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 327287700247300,
+							"parameters": {
+								"layout": "Game over"
+							}
+						}
+					],
+					"sid": 682118059626807
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "inimigo1",
+					"sid": 325637621206799,
+					"parameters": {
+						"instance-variable": "ação",
+						"comparison": 0,
+						"value": "\"right\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "inimigo1",
+					"sid": 153003694645007,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "inimigo1",
+					"sid": 228782352905954,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 116117696655658
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "inimigo1",
+					"sid": 554870375372508,
+					"parameters": {
+						"instance-variable": "ação",
+						"comparison": 0,
+						"value": "\"left\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "inimigo1",
+					"sid": 203781354449801,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "inimigo1",
+					"sid": 548850721607074,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 345419020615574
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "inimigo1",
+					"sid": 208919641402301,
+					"parameters": {
+						"object": "marcador"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 742476028952346,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "inimigo1",
+							"sid": 525258052434634,
+							"parameters": {
+								"instance-variable": "ação",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "inimigo1",
+							"sid": 736481494005644,
+							"parameters": {
+								"instance-variable": "ação",
+								"value": "\"left\""
+							}
+						}
+					],
+					"sid": 785666835716423
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 197725086594048
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "inimigo1",
+							"sid": 800573114872453,
+							"parameters": {
+								"instance-variable": "ação",
+								"value": "\"right\""
+							}
+						}
+					],
+					"sid": 567228141002387
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jogador",
+					"sid": 673861303051949,
+					"parameters": {
+						"object": "espinho"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Animação",
+					"sid": 778008756638917,
+					"parameters": {
+						"animation": "\"morte\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Jogador",
+					"sid": 698153402039689
+				},
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 396742208943953,
+					"parameters": {
+						"tag": "\"gamemusic\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 537308071186118,
+					"parameters": {
+						"audio-file": "male-death-sound-128357",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 325109542877628,
+					"parameters": {
+						"layout": "Game over"
+					}
+				}
+			],
+			"sid": 938972643754838
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 670928161875190,
+					"parameters": {
+						"first-value": "Pontos",
+						"comparison": 0,
+						"second-value": "17"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 829381032442759,
+					"parameters": {
+						"layout": "fim de jogo"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 899328796467448,
+					"parameters": {
+						"tag": "\"gamemusic\""
+					}
+				}
+			],
+			"sid": 205706046642909
+		}
+	],
+	"sid": 538600430379355
+}

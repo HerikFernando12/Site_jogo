@@ -1,0 +1,51 @@
+{
+	"name": "fim de jogo",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 676591596789470
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 299258224076437,
+					"parameters": {
+						"variable": "Pontos"
+					}
+				}
+			],
+			"sid": 912993093868347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 438524180186536,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 777467612356290,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 458445119958118
+		}
+	],
+	"sid": 778595208028523
+}

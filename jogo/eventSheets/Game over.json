@@ -1,0 +1,51 @@
+{
+	"name": "Game over",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 753341328253879
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 189839845742390,
+					"parameters": {
+						"variable": "Pontos"
+					}
+				}
+			],
+			"sid": 356845427588084
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 781124208567452,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 925934904806519,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 510905864065414
+		}
+	],
+	"sid": 857682513057013
+}

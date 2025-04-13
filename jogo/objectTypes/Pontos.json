@@ -1,0 +1,16 @@
+{
+	"name": "Pontos",
+	"plugin-id": "Text",
+	"sid": 934558830670835,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Âncora",
+			"sid": 733184893516871
+		}
+	],
+	"effectTypes": []
+}

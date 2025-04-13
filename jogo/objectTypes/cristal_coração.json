@@ -1,0 +1,66 @@
+{
+	"name": "cristal_coração",
+	"plugin-id": "Sprite",
+	"sid": 469366003835579,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Senóide",
+			"sid": 117166173430472
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 350,
+						"height": 350,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9142495,
+						"collisionPoly": {
+							"points": [
+								0.15555555555555556,
+								0.068,
+								0.8444444444444444,
+								0.068,
+								0.9396825396825397,
+								0.188,
+								0.9396825396825397,
+								0.46,
+								0.5301587301587302,
+								0.976,
+								0.46984126984126984,
+								0.976,
+								0.06031746031746032,
+								0.46,
+								0.06031746031746032,
+								0.188
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 525878004183887,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

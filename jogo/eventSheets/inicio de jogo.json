@@ -1,0 +1,36 @@
+{
+	"name": "inicio de jogo",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 306804283634045,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 183351576713974,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 259228987104766
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 670136303820478
+		}
+	],
+	"sid": 188492173244668
+}
